@@ -18,4 +18,4 @@ Deployed via github pages - [link](https://gsemikozov.github.io/piletilevi-test-
 
 ## TODO:
 
-1. choose and use only 1 approach for styling
+- choose and use only 1 approach for styling
