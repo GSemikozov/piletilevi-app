@@ -6,15 +6,20 @@ type BaseEntityConstructorOptions = {
 
 export abstract class BaseEntity {
   constructor(options: BaseEntityConstructorOptions | null) {
-    const relationsProperties: string[] = Reflect.getMetadata(relationsPropertiesSymbol, this) || [];
-    const relationsListProperties: string[] = Reflect.getMetadata(relationsListPropertiesSymbol, this) || [];
+    const relationsProperties: string[] =
+      Reflect.getMetadata(relationsPropertiesSymbol, this) || [];
+    const relationsListProperties: string[] =
+      Reflect.getMetadata(relationsListPropertiesSymbol, this) || [];
 
     relationsProperties.forEach(key => this.setRelationProperty(options, key));
     relationsListProperties.forEach(key => this.setRelationListProperty(options, key));
   }
 
   //
-  private setRelationProperty(options: BaseEntityConstructorOptions | null, propertyKey: string): void {
+  private setRelationProperty(
+    options: BaseEntityConstructorOptions | null,
+    propertyKey: string,
+  ): void {
     // @ts-ignore: Complex types resolving related to reflect metadata flow
     this[propertyKey] = {
       __from: options?.__from,
@@ -23,7 +28,10 @@ export abstract class BaseEntity {
   }
 
   //
-  private setRelationListProperty(options: BaseEntityConstructorOptions | null, propertyKey: string): void {
+  private setRelationListProperty(
+    options: BaseEntityConstructorOptions | null,
+    propertyKey: string,
+  ): void {
     // @ts-ignore: Complex types resolving related to reflect metadata flow
     this[propertyKey] = options?.[propertyKey] ?? [];
   }

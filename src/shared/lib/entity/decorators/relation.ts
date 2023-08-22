@@ -29,7 +29,9 @@ const Relation = (getType: () => BaseEntity) => (target: ObjectConstructor, key:
       let value: BaseEntity | null = null;
 
       if (canSetRelation) {
-        value = Reflect.construct<any, any>(type, [{ ...args, __from: [...__from, currentConstructorName] }]);
+        value = Reflect.construct<any, any>(type, [
+          { ...args, __from: [...__from, currentConstructorName] },
+        ]);
       }
 
       Reflect.defineMetadata(key, value, this);

@@ -5,7 +5,8 @@ import { EventPage } from '@pages/event';
 
 import type { RouteProps as BaseRouteProps } from 'react-router-dom';
 
-export type RouteProps = Omit<BaseRouteProps, 'element'> & {
+export type RouteProps = Omit<BaseRouteProps, 'path' | 'element'> & {
+  path: string;
   element: () => React.ReactNode;
   layout: (props: React.PropsWithChildren) => React.ReactNode;
 };

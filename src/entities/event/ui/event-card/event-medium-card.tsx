@@ -2,20 +2,24 @@ import { styled } from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
 import { EventEntity } from '@entities/event/entity';
+import { routesMap } from '@routing/routes';
+import { createRoute } from '@shared/utils';
 
-export type EventCardProps = React.PropsWithChildren<{
+export type EventMediumCardProps = React.PropsWithChildren<{
   event: EventEntity;
 
   actionsSlot?: React.ReactNode;
 }>;
 
-export const EventCard: React.FunctionComponent<EventCardProps> = props => {
+export const EventMediumCard: React.FunctionComponent<EventMediumCardProps> = props => {
   const { event, actionsSlot } = props;
 
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
-    navigate(`/events/${event.id}`);
+  const handleNavigate = (): void => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    navigate(createRoute(routesMap.event.path, { id: event.id }));
   };
 
   return (

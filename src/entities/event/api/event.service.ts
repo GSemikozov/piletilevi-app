@@ -1,6 +1,7 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 
-import { createApiRoute, fetchAppBaseQuery } from '@shared/api';
+import { createRoute } from '@shared/utils';
+import { fetchAppBaseQuery } from '@shared/api';
 
 import { eventRoutesV1 } from './v1';
 
@@ -11,15 +12,15 @@ export const eventService = createApi({
   baseQuery: fetchAppBaseQuery,
   endpoints: builder => ({
     getEvents: builder.query<EventApiV1.Event, void>({
-      query: () => createApiRoute(eventRoutesV1.getEvents),
+      query: () => createRoute(eventRoutesV1.getEvents),
     }),
 
     getEventsTop: builder.query<EventApiV1.Event, void>({
-      query: () => createApiRoute(eventRoutesV1.getEventsTop),
+      query: () => createRoute(eventRoutesV1.getEventsTop),
     }),
 
     getEvent: builder.query<EventApiV1.Event, number>({
-      query: id => createApiRoute(eventRoutesV1.getEvent, { id }),
+      query: id => createRoute(eventRoutesV1.getEvent, { id }),
     }),
   }),
 });

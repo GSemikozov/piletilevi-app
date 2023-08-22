@@ -14,6 +14,10 @@ const styles = {
     marginBlockStart: 0,
     marginBlockEnd: 0,
   },
+  h5: {
+    marginBlockStart: 0,
+    marginBlockEnd: 0,
+  },
 };
 
 export const withMaterialUi = (component: WrapedComponent<AppProps>) => (props: AppProps) => {
