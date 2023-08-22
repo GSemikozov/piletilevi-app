@@ -85,6 +85,11 @@ const Header = styled.div`
 const Title = styled.h5`
   font-size: 22px;
   font-weight: 700;
+
+  @media (max-width: 599.95px) {
+    font-size: 18px;
+    line-height: 1.3;
+  }
 `;
 
 const Actions = styled.div`

@@ -57,6 +57,9 @@ const Root = styled.div`
     gap: 12px;
     box-shadow: none;
     background-color: transparent;
+    &:hover {
+      box-shadow: none;
+    }
   }
 `;
 

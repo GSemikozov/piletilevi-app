@@ -1,7 +1,14 @@
 import { BaseIconProps } from './types';
 
 export const HeartIcon: React.FunctionComponent<BaseIconProps> = props => (
-  <svg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
+  <svg
+    width='23'
+    height='22'
+    viewBox='0 0 23 22'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+    {...props}
+  >
     <g id='fi:heart'>
       <path
         id='Vector'

@@ -1,7 +1,14 @@
 import { BaseIconProps } from './types';
 
 export const CartIcon: React.FunctionComponent<BaseIconProps> = props => (
-  <svg width='28' height='30' viewBox='0 0 28 30' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
+  <svg
+    width='28'
+    height='30'
+    viewBox='0 0 28 30'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+    {...props}
+  >
     <path
       d='M20 28C20.5523 28 21 27.5523 21 27C21 26.4477 20.5523 26 20 26C19.4477 26 19 26.4477 19 27C19 27.5523 19.4477 28 20 28Z'
       fill='#333333'

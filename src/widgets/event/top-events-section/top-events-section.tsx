@@ -123,7 +123,6 @@ const CarouselItem = styled.div<{ columns?: number }>`
   width: 100%;
   @media (max-width: 599.95px) {
     display: flex;
-    flex-wrap: wrap;
     grid-template-columns: ${p => `repeat(${p.columns}, minmax(160px, 1fr))`};
     gap: 8px;
   }

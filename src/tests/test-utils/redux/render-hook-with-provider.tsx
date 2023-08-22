@@ -25,7 +25,12 @@ export const renderHookWithProvider = <
   render: (initiapProps: Props) => Result,
   options: RenderHookOptions<Props, Q, Container, BaseElement> & ExtendedRenderHookOptions = {},
 ) => {
-  const { preloadedState = {}, store = setupStore(preloadedState), wrapper: Wrapper, ...renderHookOptions } = options;
+  const {
+    preloadedState = {},
+    store = setupStore(preloadedState),
+    wrapper: Wrapper,
+    ...renderHookOptions
+  } = options;
 
   const BaseWrapper = (props: React.PropsWithChildren<any>): JSX.Element => {
     const { children } = props;

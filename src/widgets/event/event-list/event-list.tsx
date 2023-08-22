@@ -23,7 +23,7 @@ export const EventList: React.FunctionComponent<EventListProps> = props => {
 const Root = styled.div<{ fluid?: boolean }>`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
-  gap: 24px 16px;
+  gap: 32px 16px;
 
   ${p =>
     p.fluid &&
@@ -36,7 +36,7 @@ const Root = styled.div<{ fluid?: boolean }>`
 
   @media (max-width:599.95px) {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 24px;
   }
 `;

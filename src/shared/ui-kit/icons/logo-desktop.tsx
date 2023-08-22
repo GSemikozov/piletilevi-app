@@ -1,7 +1,14 @@
 import { BaseIconProps } from './types';
 
 export const LogoDesktop: React.FunctionComponent<BaseIconProps> = props => (
-  <svg width='195' height='46' viewBox='0 0 195 46' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
+  <svg
+    width='195'
+    height='46'
+    viewBox='0 0 195 46'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+    {...props}
+  >
     <g id='Group'>
       <g id='Group_2'>
         <path

@@ -39,13 +39,8 @@ export const EventSmallCard: React.FunctionComponent<EventSmallCardProps> = prop
 
 const Root = styled.div`
   cursor: pointer;
-  @media (max-width: 599.95px) {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    box-shadow: none;
-    background-color: transparent;
-  }
+  box-shadow: none;
+  background-color: transparent;
 `;
 
 const Image = styled.div.attrs<{ src?: string }>(props => ({
@@ -75,16 +70,21 @@ const Badge = styled.div`
   font-weight: 700;
   background-color: #ff0033;
   border-radius: 0 50% 50% 0;
+  @media (max-width: 599.95px) {
+    font-size: 14px;
+  }
 `;
 
 const Main = styled.div`
   display: flex;
   flex-wrap: wrap;
-  padding: 16px;
+  padding: 0;
+  margin-top: 16px;
   @media (max-width: 599.95px) {
     flex-direction: column;
     gap: 6px;
     padding: 0;
+    margin-top: 8px;
   }
   & > * {
     width: 100%;
@@ -94,9 +94,9 @@ const Main = styled.div`
 // TODO: create datetime formatter
 const Datetime = styled.div`
   color: #4a3991;
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Roboto';
-  font-weight: 700;
+  font-weight: 500;
   @media (max-width: 599.95px) {
     font-size: 14px;
     order: 2;
@@ -116,10 +116,9 @@ const Title = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   @media (max-width: 599.95px) {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.3;
-    max-height: 42px;
-    -webkit-line-clamp: none;
+    max-height: 38px;
     margin-top: 0;
     order: 1;
   }

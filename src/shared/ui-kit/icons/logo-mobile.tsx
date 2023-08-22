@@ -1,7 +1,14 @@
 import { BaseIconProps } from './types';
 
 export const LogoMobile: React.FunctionComponent<BaseIconProps> = props => (
-  <svg width='64' height='42' viewBox='0 0 64 42' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
+  <svg
+    width='64'
+    height='42'
+    viewBox='0 0 64 42'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+    {...props}
+  >
     <g id='Group'>
       <g id='Group_2'>
         <path

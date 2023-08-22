@@ -4,7 +4,14 @@ import { withStyles } from 'tss-react/mui';
 import { Badge, Box, IconButton } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-import { CartIcon, HeartOutlinedIcon, LogoDesktop, LogoMobile, MenuIcon, UserIcon } from '@shared/ui-kit/icons';
+import {
+  CartIcon,
+  HeartOutlinedIcon,
+  LogoDesktop,
+  LogoMobile,
+  MenuIcon,
+  UserIcon,
+} from '@shared/ui-kit/icons';
 
 import { MenuItem } from './menu-item';
 import { Menu } from './menu';
@@ -44,7 +51,7 @@ export const Header: React.FunctionComponent = () => {
       <TopNavigator>
         <Logo>
           <Link to={'/'}>
-            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Box sx={{ display: { xs: 'none', md: 'block' }, pl: 1.1 }}>
               <LogoDesktop />
             </Box>
             <Box sx={{ display: { xs: 'block', md: 'none' }, mr: { xs: 1.5 } }}>
@@ -113,6 +120,7 @@ const Root = styled.div`
 const TopNavigator = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-grow: 1;
 `;
 
 const Logo = styled.div`
