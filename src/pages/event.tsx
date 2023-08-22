@@ -13,7 +13,9 @@ export const EventPage = () => {
   return (
     <Box sx={{ px: 8 }}>
       <Typography variant='h3'>Event ID-{id}</Typography>
-      <Box mt={4}>Event data: {JSON.stringify(event)}</Box>
+      <Box mt={4} sx={{ wordBreak: 'break-word' }}>
+        Event data: {JSON.stringify(event)}
+      </Box>
     </Box>
   );
 };
