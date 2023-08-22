@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Experimental */
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    "baseUrl": "./",
+    "paths": {
+      "@config": ["./config"],
+      "@config/*": ["./config/*"],
+
+      "@app": ["./src/app"],
+      "@app/*": ["./src/app/*"],
+
+      "@widgets": ["./src/widgets"],
+      "@widgets/*": ["./src/widgets/*"],
+
+      "@pages": ["./src/pages"],
+      "@pages/*": ["./src/pages/*"],
+
+      "@routing": ["./src/routing"],
+      "@routing/*": ["./src/routing/*"],
+
+      "@entities": ["./src/entities"],
+      "@entities/*": ["./src/entities/*"],
+
+      "@shared": ["./src/shared"],
+      "@shared/*": ["./src/shared/*"],
+
+      "@tests": ["./src/tests"],
+      "@tests/*": ["./src/tests/*"]
+    }
+  },
+  "include": ["config", "src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
