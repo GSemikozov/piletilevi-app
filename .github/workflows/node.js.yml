@@ -5,9 +5,9 @@ name: App CI
 
 on:
   push:
-    branches: ['feature/setup-project']
+    branches: ['main']
   pull_request:
-    branches: ['feature/setup-project']
+    branches: ['main']
 
 jobs:
   build:
